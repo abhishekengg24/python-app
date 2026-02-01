@@ -54,7 +54,7 @@ jobs:
         run:  |
           cd infra-repo
           git config user.name "GitHub Actions"
-          got config user.email "actions@github.com"
+          git config user.email "actions@github.com"
           git add .
           git commit -m "Deploying image tag ${{ needs.build-and-push.outputs.short_sha }}"
           git push
